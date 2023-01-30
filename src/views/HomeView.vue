@@ -1,9 +1,9 @@
 <script setup>
-import TheWelcome from "../components/TheWelcome.vue";
+import RoutesToFollow from "../components/RoutesToFollow.vue";
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <RoutesToFollow />
   </main>
 </template>

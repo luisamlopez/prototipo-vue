@@ -7,11 +7,17 @@
   font-weight: normal;
 }
 
-a,
-.green {
+a {
   text-decoration: none;
-  color: #de172e;
+  color: #007935;
   transition: 0.4s;
+}
+
+.titulo {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #007935;
 }
 
 @media (hover: hover) {

@@ -1,7 +1,7 @@
 <template>
   <div class="item">
     <i>
-      <slot name="icon"></slot>
+      <slot name="imagen"></slot>
     </i>
     <div class="details">
       <h3>
@@ -14,8 +14,15 @@
 
 <style scoped>
 .item {
-  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid var(--color-border);
+  border-radius: 4px;
+  height: 200px;
+  /* padding: 0.4rem 0 1rem calc(var(--section-gap) / 2); */
 }
 
 .details {
@@ -25,11 +32,8 @@
 
 i {
   display: flex;
-  place-items: center;
-  place-content: center;
-  width: 32px;
-  height: 32px;
-  color: var(--color-text);
+  width: 50%;
+  margin-top: 16px;
 }
 
 h3 {
@@ -39,9 +43,10 @@ h3 {
   color: var(--color-heading);
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .item {
     margin-top: 0;
+    flex-direction: column;
     padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
   }
 
@@ -81,5 +86,5 @@ h3 {
   .item:last-of-type:after {
     display: none;
   }
-}
+} */
 </style>

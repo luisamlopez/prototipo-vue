@@ -9,8 +9,15 @@ defineProps({
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>Prototipo actividad 1.3</h3>
+    <h1 class="titulo">{{ msg }}</h1>
+    <h3>
+      La presente es una actividad evaluativa diseño y maquetado libre,
+      utilizando los componentes, rutas y navegación propios del Framework
+      Vue.js.
+    </h3>
+    <h4>
+      Realizado por: <a href="https://github.com/luisamlopez">Luisa López</a>
+    </h4>
   </div>
 </template>
 
@@ -23,6 +30,12 @@ h1 {
 
 h3 {
   font-size: 1.2rem;
+}
+
+h4 {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .greetings h1,
