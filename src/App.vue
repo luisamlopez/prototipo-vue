@@ -5,31 +5,34 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 <template>
   <header>
-    <div class="logos-collab">
-      <img
-        alt="Logo UDG"
-        class="logo"
-        src="http://www.udgvirtual.udg.mx/sites/default/files/logo_udgvirtual_marca_registrada_chico.jpg"
-        width="300"
-      />
-      <span class="collab">En colaboración con </span>
-      <img
-        alt="Logo UCAB"
-        class="logo"
-        src="https://www.ucab.edu.ve/wp-content/uploads/2019/04/Logo_UCAB_1.png"
-        width="300"
-      />
-    </div>
+    <div class="nombre">
+      <div class="logos-collab">
+        <img
+          alt="Logo UDG"
+          class="logo"
+          src="http://www.udgvirtual.udg.mx/sites/default/files/logo_udgvirtual_marca_registrada_chico.jpg"
+          width="300"
+        />
+        <span class="collab">En colaboración con </span>
+        <img
+          alt="Logo UCAB"
+          class="logo"
+          src="https://www.ucab.edu.ve/wp-content/uploads/2019/04/Logo_UCAB_1.png"
+          width="300"
+        />
+      </div>
 
-    <div class="wrapper">
-      <HelloWorld msg="Prototipo para la Actividad 1.3" />
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+      <div class="wrapper">
+        <HelloWorld msg="Prototipo para la Actividad 1.3" />
+      </div>
     </div>
+    <nav>
+      <RouterLink to="/">Inicio</RouterLink>
+      <RouterLink to="/code">Fragmentos del código</RouterLink>
+      <RouterLink to="/contact">Contáctame</RouterLink>
+    </nav>
   </header>
-
+  <!-- Aquí se coloca el RouterView que es el que me llama a las páginas que señalo -->
   <RouterView />
 </template>
 
@@ -37,18 +40,30 @@ import HelloWorld from "./components/HelloWorld.vue";
 header {
   line-height: 1.5;
   max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.nombre {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
 }
 
 nav {
+  display: flex;
   width: 100%;
-  font-size: 12px;
+  font-size: 18px;
   text-align: center;
-  margin-top: 2rem;
+  place-content: center;
+  place-self: center;
+  margin: 0 auto;
 }
 
 nav a.router-link-exact-active {
@@ -60,7 +75,7 @@ nav a.router-link-exact-active:hover {
 }
 
 nav a {
-  display: inline-block;
+  display: flex;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
 }
@@ -79,7 +94,7 @@ nav a:first-of-type {
 .collab {
   font-size: 1.5rem;
   font-weight: 500;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   text-align: center;
 }
 
@@ -87,7 +102,6 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
   }
 
   .logo {

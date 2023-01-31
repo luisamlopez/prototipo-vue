@@ -7,3 +7,10 @@ import RoutesToFollow from "../components/RoutesToFollow.vue";
     <RoutesToFollow />
   </main>
 </template>
+
+<style>
+main {
+  width: 100%;
+  place-content: center;
+}
+</style>

@@ -35,10 +35,14 @@ import WelcomeItem from "./WelcomeItem.vue";
         style="width: 100%"
       />
     </template>
-    <template #heading>Universidad Católica Andrés Bello</template>
+    <template #heading
+      ><a class="heading" href="https://www.ucab.edu.ve/"
+        >Universidad Católica Andrés Bello</a
+      ></template
+    >
 
     La Universidad Católica Andrés Bello, es una universidad privada con sede en
-    Caracas, ​​​ Venezuela, y con núcleos en Los Teques, Puerto Ordaz y Coro. Es
+    Caracas, Venezuela, y con núcleos en Los Teques, Puerto Ordaz y Coro. Es
     miembro de la Asociación de Universidades Confiadas a la Compañía de Jesús
     en América Latina, y la dirigen padres jesuitas
   </WelcomeItem>
@@ -46,35 +50,21 @@ import WelcomeItem from "./WelcomeItem.vue";
   <WelcomeItem>
     <template #imagen>
       <img
-        src="http://www.udgvirtual.udg.mx/sites/default/files/logo_udgvirtual_marca_registrada_chico.jpg"
-        alt="Logo UDG"
-        style="width: 100%"
+        src="https://www.austral.edu.ar/comunicacion/wp-content/themes/uaunit/img/image.php?force=true&image=https://www.austral.edu.ar/comunicacion/wp-content/uploads/2019/11/coil-1.png&width=1000&height=292&cropratio=1000:292"
+        alt="Logo Proyecto COIL"
+        style="width: 70%"
       />
     </template>
-    <template #heading>Documentation</template>
-
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener"
-      >official documentation</a
+    <template #heading
+      ><a class="heading" href="https://www.ucab.edu.ve/"
+        >Proyectos COIL</a
+      ></template
     >
-    provides you with all information you need to get started.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #imagen>
-      <img
-        src="http://www.udgvirtual.udg.mx/sites/default/files/logo_udgvirtual_marca_registrada_chico.jpg"
-        alt="Logo UDG"
-        style="width: 100%"
-      />
-    </template>
-    <template #heading> Documentation</template>
-
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener"
-      >official documentation</a
-    >
-    provides you with all information you need to get started.
+    La Coordinación de Proyectos COIL es la unidad funcional del Secretariado de
+    Internacionalización encargada de fomentar, facilitar y asesorar la
+    realización de proyectos de intercambio virtual colaborativo en línea como
+    estrategia fundamental del proceso de Internacionalización en Casa de la
+    UCAB.
   </WelcomeItem>
 </template>
 
