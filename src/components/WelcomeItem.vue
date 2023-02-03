@@ -30,10 +30,11 @@
   margin-left: 1rem;
 }
 
-i {
+.item i {
   display: flex;
   width: 50%;
   margin-top: 16px;
+  place-self: center;
 }
 
 h3 {

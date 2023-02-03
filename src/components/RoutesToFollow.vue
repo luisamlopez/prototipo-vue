@@ -52,7 +52,7 @@ import WelcomeItem from "./WelcomeItem.vue";
       <img
         src="https://www.austral.edu.ar/comunicacion/wp-content/themes/uaunit/img/image.php?force=true&image=https://www.austral.edu.ar/comunicacion/wp-content/uploads/2019/11/coil-1.png&width=1000&height=292&cropratio=1000:292"
         alt="Logo Proyecto COIL"
-        style="width: 70%"
+        style="width: 100%"
       />
     </template>
     <template #heading
