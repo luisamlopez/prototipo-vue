@@ -7,6 +7,18 @@ import WelcomeItem from "./WelcomeItem.vue";
     Encuentra información sobre esta colaboración internacional entre
     universidades. <br />👇👇🏼👇🏽👇🏽👇🏾👇🏿
   </h5>
+  <ul>
+    <li>
+      <a href="https://www.udgvirtual.udg.mx/presentacion">UDG Virtual</a>
+    </li>
+    <li>
+      <a href="https://www.ucab.edu.ve">Universidad Católica Andrés Bello</a>
+    </li>
+    <li>
+      <a href="https://www.ucab.edu.ve/">Proyectos COIL</a>
+    </li>
+  </ul>
+  <br />
   <WelcomeItem>
     <template #imagen>
       <img

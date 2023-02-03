@@ -6,6 +6,8 @@
     <p><slot name="mail"></slot></p>
     <h3>Mensaje:</h3>
     <p><slot name="msj" class="msj"></slot></p>
+    <h3>Detalles que te gustaron</h3>
+    <p><slot name="detalles"></slot></p>
   </div>
 </template>
 
@@ -18,8 +20,8 @@
   justify-content: left;
   border: solid var(--color-border);
   border-radius: 4px;
-  height: 250px;
-  width: 250px;
+  height: 280px;
+  width: 280px;
   padding: 0.5rem;
 }
 h3 {

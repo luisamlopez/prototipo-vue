@@ -21,6 +21,35 @@ import UserCard from "../components/UserCard.vue";
 
         <span>Mensaje</span>
         <textarea v-model="mensaje" type="text" placeholder="Mensaje" />
+
+        <span>Selecciona tus detalles favoritos:</span>
+        <div class="check">
+          <input
+            type="checkbox"
+            id="comp-inicio"
+            value="Componentes del inicio"
+            v-model="checkedNames"
+          />
+          <label for="comp-inicio">Componentes del inicio</label>
+        </div>
+        <div class="check">
+          <input
+            type="checkbox"
+            id="inicio"
+            value="Inicio"
+            v-model="checkedNames"
+          />
+          <label for="inicio">Inicio</label>
+        </div>
+        <div class="check">
+          <input
+            type="checkbox"
+            id="productos"
+            value="Ejemplo de Inventario"
+            v-model="checkedNames"
+          />
+          <label for="productos">Ejemplo de Inventario</label>
+        </div>
       </div>
       <input class="submit" type="submit" value="Enviar" />
     </form>
@@ -38,6 +67,13 @@ import UserCard from "../components/UserCard.vue";
         <template #msj>
           {{ mensaje }}
         </template>
+        <template #detalles>
+          {{
+            checkedNames.length > 0
+              ? checkedNames.join(", ")
+              : "No seleccionaste ningún detalle."
+          }}
+        </template>
       </UserCard>
     </div>
   </div>
@@ -49,6 +85,7 @@ export default {
       nombre: "",
       email: "",
       mensaje: "",
+      checkedNames: [],
       formSubmitted: false,
     };
   },
@@ -130,7 +167,6 @@ span {
   align-items: center;
   flex-direction: column;
 }
-
 @media (min-width: 1024px) {
   .contact {
     min-height: 100vh;
