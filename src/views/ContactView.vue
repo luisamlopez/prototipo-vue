@@ -1,3 +1,7 @@
+<script setup>
+import UserCard from "../components/UserCard.vue";
+</script>
+
 <template>
   <div class="contact">
     <div class="contact-header">
@@ -8,44 +12,60 @@
       </p>
       <img src="../assets/Luisa López.svg" alt="Contacto" />
     </div>
-
-    <form class="form">
+    <form @submit.prevent="submitForm" v-if="!formSubmitted">
       <div class="form__group">
-        <label for="name">Nombre</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Tu nombre"
-          required
-        />
-        <label for="email">Correo electrónico</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Tu correo electrónico"
-          required
-        />
+        <span>Nombre completo</span>
+        <input v-model="nombre" type="text" placeholder="Nombre completo" />
+        <span>Email</span>
+        <input v-model="email" type="email" placeholder="Email" />
 
-        <label for="message">Mensaje</label>
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Escribe tu mensaje"
-          required
-        ></textarea>
+        <span>Mensaje</span>
+        <textarea v-model="mensaje" type="text" placeholder="Mensaje" />
       </div>
-
-      <button type="submit" onclick="">Enviar</button>
+      <input class="submit" type="submit" value="Enviar" />
     </form>
+
+    <div v-if="formSubmitted" class="card">
+      <h2>¡Gracias por contactarme!</h2>
+      <h3>Esta es solo una prueba para llamar a un componente</h3>
+      <UserCard>
+        <template #name>
+          {{ nombre }}
+        </template>
+        <template #mail>
+          {{ email }}
+        </template>
+        <template #msj>
+          {{ mensaje }}
+        </template>
+      </UserCard>
+    </div>
   </div>
 </template>
-
+<script>
+export default {
+  data() {
+    return {
+      nombre: "",
+      email: "",
+      mensaje: "",
+      formSubmitted: false,
+    };
+  },
+  methods: {
+    submitForm: function () {
+      this.formSubmitted = true;
+    },
+  },
+};
+</script>
 <style>
-.contact {
-  padding: 2rem;
-  justify-content: space-between;
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 .contact-header {
   display: flex;
@@ -53,20 +73,14 @@
   align-items: center;
   margin-bottom: 2rem;
 }
-
 .contact-header img {
   width: 100%;
   max-width: 300px;
 }
-
-.form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
+input {
+  padding: 4px 8px;
+  margin: 4px;
 }
-
 .form__group {
   display: flex;
   flex-direction: column;
@@ -76,7 +90,11 @@
 .form__group label {
   margin-bottom: 0.5rem;
 }
+span {
+  font-size: 18px;
 
+  font-weight: 500;
+}
 .form__group input,
 .form__group textarea {
   padding: 0.5rem;
@@ -85,9 +103,8 @@
   font-size: 1rem;
   transition: all 0.3s ease;
 }
-button {
+.submit {
   background-color: var(--vt-c-indigo);
-
   color: var(--vt-c-yellow);
   border: 0;
   padding: 0.5rem;
@@ -98,9 +115,20 @@ button {
   transition: all 0.3s ease;
 }
 
-button:hover {
+.submit:hover {
   background-color: var(--vt-c-green);
   color: white;
+}
+.contact {
+  padding: 2rem;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 @media (min-width: 1024px) {
@@ -121,11 +149,3 @@ button:hover {
   }
 }
 </style>
-
-<script>
-//función para enviar información del mensaje
-
-export default {
-  name: "ContactView",
-};
-</script>

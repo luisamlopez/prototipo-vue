@@ -20,11 +20,12 @@ import WelcomeItem from "./WelcomeItem.vue";
         >UDG Virtual</a
       ></template
     >
-
-    UDGVirtual es un órgano desconcentrado de la Universidad de Guadalajara
-    responsable de administrar y desarrollar programas académicos de nivel medio
-    superior y superior, en modalidades no escolarizadas, apoyadas en las
-    tecnologías de la información y de la comunicación.
+    <template #msg>
+      UDGVirtual es un órgano desconcentrado de la Universidad de Guadalajara
+      responsable de administrar y desarrollar programas académicos de nivel
+      medio superior y superior, en modalidades no escolarizadas, apoyadas en
+      las tecnologías de la información y de la comunicación.</template
+    >
   </WelcomeItem>
 
   <WelcomeItem>
@@ -40,11 +41,12 @@ import WelcomeItem from "./WelcomeItem.vue";
         >Universidad Católica Andrés Bello</a
       ></template
     >
-
-    La Universidad Católica Andrés Bello, es una universidad privada con sede en
-    Caracas, Venezuela, y con núcleos en Los Teques, Puerto Ordaz y Coro. Es
-    miembro de la Asociación de Universidades Confiadas a la Compañía de Jesús
-    en América Latina, y la dirigen padres jesuitas
+    <template #msg>
+      La Universidad Católica Andrés Bello, es una universidad privada con sede
+      en Caracas, Venezuela, y con núcleos en Los Teques, Puerto Ordaz y Coro.
+      Es miembro de la Asociación de Universidades Confiadas a la Compañía de
+      Jesús en América Latina, y la dirigen padres jesuitas.</template
+    >
   </WelcomeItem>
 
   <WelcomeItem>
@@ -52,7 +54,7 @@ import WelcomeItem from "./WelcomeItem.vue";
       <img
         src="https://www.austral.edu.ar/comunicacion/wp-content/themes/uaunit/img/image.php?force=true&image=https://www.austral.edu.ar/comunicacion/wp-content/uploads/2019/11/coil-1.png&width=1000&height=292&cropratio=1000:292"
         alt="Logo Proyecto COIL"
-        style="width: 100%"
+        style="width: 90%"
       />
     </template>
     <template #heading
@@ -60,11 +62,13 @@ import WelcomeItem from "./WelcomeItem.vue";
         >Proyectos COIL</a
       ></template
     >
-    La Coordinación de Proyectos COIL es la unidad funcional del Secretariado de
-    Internacionalización encargada de fomentar, facilitar y asesorar la
-    realización de proyectos de intercambio virtual colaborativo en línea como
-    estrategia fundamental del proceso de Internacionalización en Casa de la
-    UCAB.
+    <template #msg>
+      La Coordinación de Proyectos COIL es la unidad funcional del Secretariado
+      de Internacionalización encargada de fomentar, facilitar y asesorar la
+      realización de proyectos de intercambio virtual colaborativo en línea como
+      estrategia fundamental del proceso de Internacionalización en Casa de la
+      UCAB.
+    </template>
   </WelcomeItem>
 </template>
 

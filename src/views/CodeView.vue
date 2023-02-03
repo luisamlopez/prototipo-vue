@@ -1,6 +1,6 @@
 <template>
   <div class="code">
-    <h1>Extractos de código de esta actividad</h1>
+    <h1>Ejemplo de componentes simulando inventario</h1>
   </div>
 </template>
 

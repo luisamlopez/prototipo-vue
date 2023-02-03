@@ -7,7 +7,9 @@
       <h3>
         <slot name="heading"></slot>
       </h3>
-      <slot></slot>
+      <p>
+        <slot name="msg"></slot>
+      </p>
     </div>
   </div>
 </template>
@@ -21,13 +23,13 @@
   justify-content: center;
   border: solid var(--color-border);
   border-radius: 4px;
-  height: 250px;
+  height: 280px;
   /* padding: 0.4rem 0 1rem calc(var(--section-gap) / 2); */
 }
 
 .details {
   flex: 1;
-  margin-left: 1rem;
+  padding: 10px;
 }
 
 .item i {
@@ -42,5 +44,9 @@ h3 {
   font-weight: 500;
   margin-bottom: 0.4rem;
   color: var(--color-heading);
+}
+
+p {
+  text-align: justify;
 }
 </style>
